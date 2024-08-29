@@ -21,10 +21,14 @@ func main() {
 	var arr1 [7]int //类型为[7]int
 	arr1[0] = 1
 	fmt.Println(arr1)
+	//修改值后  没有变化  因为数组是值类型传递  传递的是数组值的副本 没办法改变值的
+	updatedArr(arr1)
+	fmt.Println("====", arr1)
 	//数组的初始化
 	// 第一种
 	var arr2 [5]string //类型为[5]string
 	arr2[0] = "123"
+
 	fmt.Println(arr2)
 
 	//第二种  指定长度的同时  初始化元素
@@ -49,4 +53,7 @@ func main() {
 		fmt.Printf("索引:%v值：%v ,", idx, val)
 	}
 
+}
+func updatedArr(arr [7]int) {
+	arr[0] = 100
 }
