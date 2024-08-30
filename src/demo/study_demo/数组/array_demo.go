@@ -52,8 +52,31 @@ func main() {
 	for idx, val := range strArr2 {
 		fmt.Printf("索引:%v值：%v ,", idx, val)
 	}
+	/*
+
+		二维数组定义 var arr = [][]类型{}
+	*/
+	fmt.Println()
+	fmt.Println("=================")
+	var arr3 = [3][2]string{
+		{"北京", "上海"},
+		{"毕节", "贵阳"},
+		{"长沙", "宁乡"}}
+	//二维数组也是值类型 修改的只是传递的副本
+	updatedArr2(arr3)
+	//遍历二维数组
+	fmt.Println(arr3)
+	for _, val := range arr3 {
+		for _, v := range val {
+			fmt.Println(v)
+		}
+	}
 
 }
 func updatedArr(arr [7]int) {
 	arr[0] = 100
+}
+
+func updatedArr2(arr [3][2]string) {
+	arr[0][0] = "修改"
 }
