@@ -3,20 +3,20 @@ package main
 import "fmt"
 
 /*
-	 结构体的定义语法 ：
-		type 结构体名称 struct{
-			变量名1 类型
-			变量名2 类型
-		}
+		 结构体的定义语法 ：
+			type 结构体名称 struct{
+				变量名1 类型
+				变量名2 类型
+			}
+	        **** 结构体是值类型！！！！***
 
+			在golang中变量名大写表示public 小写表示private
 
-		在golang中变量名大写表示public 小写表示private
-
-		p2 := new(person) //这里的初始化类型是指针类型 new关键字初始化的都是指针  在golang中， 结构体的指针可以直接访问变量
-		p2.name = "王五"
-		p2.age = 20
-		p2.sex = "男"
-		底层其实是（*p2).name ="xxx"
+			p2 := new(person) //这里的初始化类型是指针类型 new关键字初始化的都是指针  在golang中， 结构体的指针可以直接访问变量
+			p2.name = "王五"
+			p2.age = 20
+			p2.sex = "男"
+			底层其实是（*p2).name ="xxx"
 */
 type person struct {
 	name string
