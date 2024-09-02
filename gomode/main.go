@@ -6,8 +6,14 @@ import (
 )
 
 func main() {
+	s := calc.Sub(7, 5)
 	//使用自定义的包方法：包名.方法名
 	fmt.Printf("calc.Add(0, 1): %v\n", calc.Add(0, 1))
-	s := calc.Sub(7, 5)
+
 	fmt.Println(s)
+}
+
+func init() {
+
+	fmt.Println("main init ...")
 }
