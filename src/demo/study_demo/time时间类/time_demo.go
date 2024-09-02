@@ -31,7 +31,7 @@ func main() {
 
 	//时间蹉转化为时间
 	dateTime := time.Unix(timestamp, 0)
-	fmt.Println("时间：", dateTime
+	fmt.Println("时间：", dateTime)
 
 	//转化为时间
 	dateStr = "2024-09-01 16:00:39"
